@@ -1,7 +1,11 @@
-SELECT * 
+SELECT price
+FROM books
+where price > (
+SELECT avg(price)
 FROM orders
-left join books on orders.client_id = books.id
-left join book_authors on books.id = book_authors.book_id
-left join authors on authors.id = book_authors.author_id
-
+LEFT JOIN books on books.id = orders.book_id
+LEFT JOIN book_authors on orders.book_id = book_authors.book_id
+GROUP BY book_authors.author_id
+order by count(*) DESC
+LIMIT 1)
 ;
