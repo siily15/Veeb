@@ -1,0 +1,4 @@
+select round(max(price),2)
+from books
+where type = "used"
+;
