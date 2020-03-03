@@ -1,0 +1,7 @@
+SELECT * 
+FROM orders
+left join books on orders.client_id = books.id
+left join book_authors on books.id = book_authors.book_id
+left join authors on authors.id = book_authors.author_id
+
+;
