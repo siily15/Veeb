@@ -1,0 +1,4 @@
+select type, avg(price)
+from books
+where type = "new"
+;
