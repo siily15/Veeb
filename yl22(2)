@@ -1,0 +1,4 @@
+select *
+from books
+where price >'30.52542228'
+;
