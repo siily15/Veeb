@@ -1,0 +1,7 @@
+select title, price, type
+from books 
+where type = "used" and price > (select avg(price)
+from books 
+where type = "new")
+order by price
+;
