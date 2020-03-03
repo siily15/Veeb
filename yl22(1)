@@ -1,0 +1,3 @@
+select round(max(price),2), round(min(price),2), round(avg(price),2)
+from books
+;
