@@ -1,4 +1,0 @@
-select language, count(*)
-from books
-group by language
-;
