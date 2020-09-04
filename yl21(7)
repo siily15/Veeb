@@ -1,0 +1,6 @@
+select*
+from clients
+left join orders
+on clients.id = orders.client_id
+
+;
