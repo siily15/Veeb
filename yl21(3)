@@ -1,0 +1,4 @@
+select title, release_date, price, type
+from books
+where release_date <= 1970 and type = "used" and price <= 20
+;
