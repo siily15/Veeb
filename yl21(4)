@@ -1,0 +1,3 @@
+select year(order_date) as aasta, count(*) as "tellimust arv"
+from orders
+group by year(order_date)
