@@ -1,6 +1,9 @@
-select year(order_date), title
+select year(order_date), title, book_id
 from orders
 left join books
 on orders.client_id = books.id
 where year(order_date) = 2017
+group by book_id
+order by book_id desc
+limit 10
 ;
