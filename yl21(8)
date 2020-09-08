@@ -1,0 +1,6 @@
+select year(order_date), title
+from orders
+left join books
+on orders.client_id = books.id
+where year(order_date) = 2017
+;
