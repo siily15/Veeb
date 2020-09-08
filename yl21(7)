@@ -2,5 +2,6 @@ select*
 from clients
 left join orders
 on clients.id = orders.client_id
-
+where year(order_date) = 2017
+group by client_id 
 ;
